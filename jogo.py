@@ -39,7 +39,7 @@ blue = (0, 0, 255)
 
 #load images
 sun_img = pygame.image.load('img/sun.png')
-bg_img = pygame.image.load('img/sky.png')
+bg_img = pygame.image.load('img/background.png')
 restart_img = pygame.image.load('img/restart_btn.png')
 start_img = pygame.image.load('img/start_btn.png')
 exit_img = pygame.image.load('img/exit_btn.png')
@@ -318,7 +318,7 @@ class World():
 class Enemy(pygame.sprite.Sprite):
 	def __init__(self, x, y):
 		pygame.sprite.Sprite.__init__(self)
-		self.image = pygame.image.load('img/blob.png')
+		self.image = pygame.image.load('img/tanaka.png')
 		self.rect = self.image.get_rect()
 		self.rect.x = x
 		self.rect.y = y
