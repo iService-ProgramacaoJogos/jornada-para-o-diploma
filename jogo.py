@@ -3,6 +3,7 @@ from pygame.locals import *
 from pygame import mixer
 import pickle
 from os import path
+from assets.fonts.fonts import font, font_score
 
 pygame.mixer.pre_init(44100, -16, 2, 512)
 mixer.init()
@@ -16,12 +17,6 @@ screen_height = 1000
 
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption('Platformer')
-
-
-#define font
-font = pygame.font.SysFont('Bauhaus 93', 70)
-font_score = pygame.font.SysFont('Bauhaus 93', 30)
-
 
 #define game variables
 tile_size = 50
