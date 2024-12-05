@@ -374,7 +374,7 @@ class Coin(pygame.sprite.Sprite):
 	def __init__(self, x, y):
 		pygame.sprite.Sprite.__init__(self)
 		img = pygame.image.load('assets/images/tiles/diploma.png')
-		self.image = pygame.transform.scale(img, (80, 80))
+		self.image = pygame.transform.scale(img, (60, 60))
 		self.rect = self.image.get_rect()
 		self.rect.center = (x, y)
 
@@ -421,7 +421,6 @@ while run:
 	clock.tick(fps)
 
 	screen.blit(bg_img, (0, 0))
-	screen.blit(sun_img, (100, 100))
 
 	if main_menu == True:
 		if exit_button.draw():
