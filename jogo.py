@@ -4,6 +4,7 @@ from pygame import mixer
 import pickle
 from os import path
 from assets.fonts.fonts import font, font_score
+from config.settings import screen_width, screen_height, tile_size, game_over, main_menu, level, max_levels, score, white, blue
 
 pygame.mixer.pre_init(44100, -16, 2, 512)
 mixer.init()
@@ -12,25 +13,8 @@ pygame.init()
 clock = pygame.time.Clock()
 fps = 60
 
-screen_width = 1000
-screen_height = 1000
-
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption('Platformer')
-
-#define game variables
-tile_size = 50
-game_over = 0
-main_menu = True
-level = 3
-max_levels = 7
-score = 0
-
-
-#define colours
-white = (255, 255, 255)
-blue = (0, 0, 255)
-
 
 #load images
 sun_img = pygame.image.load('assets/images/tiles/sun.png')
