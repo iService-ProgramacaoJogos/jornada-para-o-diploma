@@ -38,7 +38,6 @@ blue = (0, 0, 255)
 
 
 #load images
-sun_img = pygame.image.load('assets/images/tiles/sun.png')
 bg_img = pygame.image.load('assets/images/tiles/background.png')
 bg_img = pygame.transform.scale(bg_img, (screen_width, screen_height))
 restart_img = pygame.image.load('assets/images/objects/restart_btn.png')
