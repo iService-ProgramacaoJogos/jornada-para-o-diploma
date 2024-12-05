@@ -40,6 +40,7 @@ blue = (0, 0, 255)
 #load images
 sun_img = pygame.image.load('img/sun.png')
 bg_img = pygame.image.load('img/background.png')
+bg_img = pygame.transform.scale(bg_img, (screen_width, screen_height))
 restart_img = pygame.image.load('img/restart_btn.png')
 start_img = pygame.image.load('img/start_btn.png')
 exit_img = pygame.image.load('img/exit_btn.png')
@@ -243,7 +244,7 @@ class Player():
 		self.counter = 0
 		for num in range(1, 5):
 			img_right = pygame.image.load(f'img/boneco{num}.png')
-			img_right = pygame.transform.scale(img_right, (40, 80))
+			img_right = pygame.transform.scale(img_right, (100, 100))
 			img_left = pygame.transform.flip(img_right, True, False)
 			self.images_right.append(img_right)
 			self.images_left.append(img_left)
@@ -373,7 +374,7 @@ class Coin(pygame.sprite.Sprite):
 	def __init__(self, x, y):
 		pygame.sprite.Sprite.__init__(self)
 		img = pygame.image.load('img/diploma.png')
-		self.image = pygame.transform.scale(img, (tile_size // 2, tile_size // 2))
+		self.image = pygame.transform.scale(img, (80, 80))
 		self.rect = self.image.get_rect()
 		self.rect.center = (x, y)
 
